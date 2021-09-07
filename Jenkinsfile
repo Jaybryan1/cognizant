@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-      sh 'clean install -f MyWebApp/pom.xml'
+      sh 'mvn clean install -f github/cognizant/MyWebApp/pom.xml'
       }
     }
   }
