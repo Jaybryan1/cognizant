@@ -24,8 +24,7 @@ pipeline {
   }
   stage ('dev deploy') {
       steps {
-           deploy adapters: [tomcat9(credentialsId: 'c925896b-a589-4cb9-99df-7d2d39606caa', path: '', url: 'http://localhost:8095')], contextPath: null, war: '**/*.war'
-      }
+deploy adapters: [tomcat9(credentialsId: '14cd0444-49d5-4aa7-ad6c-d16c23c712be', path: '', url: 'http://localhost:8095')], contextPath: null, war: '**/*.war'      }
     }
     stage ('jacoco coverage'){
       steps {
