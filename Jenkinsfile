@@ -17,7 +17,7 @@ pipeline {
     }
    stage ('Code Quality') {
       steps {
-        withSonarQubeEnv('SonarQube') {
+        withSonarQubeEnv('sonarQube') {
         bat 'mvn -f MyWebApp/pom.xml sonar:sonar'
         }
       }
